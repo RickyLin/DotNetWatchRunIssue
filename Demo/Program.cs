@@ -18,7 +18,6 @@ namespace Demo
                      .Enrich.FromLogContext()
                      .Enrich.With<ExceptionDataEnricher>();
 
-                // loggerCfg.WriteTo.Console(outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} {RequestId} [{Level:u3} {SourceContext} {Scope}] {Message:lj}{NewLine}{Exception}{ExceptionData}");
                 loggerCfg.WriteTo.Console(outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3} {SourceContext} {Scope}] {Message:lj}{NewLine}{Exception}{ExceptionData}");
             });
 
